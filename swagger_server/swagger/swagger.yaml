@@ -1,0 +1,41 @@
+---
+swagger: "2.0"
+info:
+  description: "This is hello world swagger API application."
+  version: "1.0.0"
+  title: "Smart recycling bins"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "none@test.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost"
+basePath: "/v1"
+tags:
+- name: "hello world"
+  description: "get static answer to test API"
+schemes:
+- "http"
+paths:
+  /helloWorld:
+    get:
+      tags:
+      - "hello world"
+      summary: "Get hello world response"
+      description: "Get hello world response"
+      operationId: "get_hello_world"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "string"
+            example: "Hello!"
+        400:
+          description: "Invalid query"
+      x-swagger-router-controller: "swagger_server.controllers.hello_world_controller"
+definitions: {}

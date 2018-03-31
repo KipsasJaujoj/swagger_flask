@@ -12,4 +12,4 @@ def get_hello_world():  # noqa: E501
 
     :rtype: str
     """
-    return 'do some magic!'
+    return 'Hello to you too!'

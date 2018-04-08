@@ -31,10 +31,12 @@ paths:
       parameters: []
       responses:
         200:
-          description: "successful operation"
-          schema:
-            type: "string"
-            example: "Hello!"
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: hello
         400:
           description: "Invalid query"
       x-swagger-router-controller: "swagger_server.controllers.hello_world_controller"

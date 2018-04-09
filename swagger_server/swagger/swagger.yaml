@@ -28,12 +28,13 @@ paths:
       produces:
       - "application/xml"
       - "application/json"
+      parameters: []
       responses:
         200:
-          description: OK
+          description: "OK"
           schema:
-            type: string
-            example: hello
+            type: "string"
+            example: "hello"
         400:
           description: "Invalid query"
       x-swagger-router-controller: "swagger_server.controllers.hello_world_controller"

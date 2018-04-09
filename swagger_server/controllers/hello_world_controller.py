@@ -10,6 +10,6 @@ def get_hello_world():  # noqa: E501
     Get hello world response # noqa: E501
 
 
-    :rtype: json
+    :rtype: str
     """
-    return "Hello!"
+    return 'Hello!'

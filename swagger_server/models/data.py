@@ -15,19 +15,19 @@ class Data(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, id: int=None, data: int=None, time: datetime=None):  # noqa: E501
+    def __init__(self, id: int=None, data: float=None, time: datetime=None):  # noqa: E501
         """Data - a model defined in Swagger
 
         :param id: The id of this Data.  # noqa: E501
         :type id: int
         :param data: The data of this Data.  # noqa: E501
-        :type data: int
+        :type data: float
         :param time: The time of this Data.  # noqa: E501
         :type time: datetime
         """
         self.swagger_types = {
             'id': int,
-            'data': int,
+            'data': float,
             'time': datetime
         }
 
@@ -76,22 +76,22 @@ class Data(Model):
         self._id = id
 
     @property
-    def data(self) -> int:
+    def data(self) -> float:
         """Gets the data of this Data.
 
 
         :return: The data of this Data.
-        :rtype: int
+        :rtype: float
         """
         return self._data
 
     @data.setter
-    def data(self, data: int):
+    def data(self, data: float):
         """Sets the data of this Data.
 
 
         :param data: The data of this Data.
-        :type data: int
+        :type data: float
         """
         if data is None:
             raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501

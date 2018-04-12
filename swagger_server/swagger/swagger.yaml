@@ -84,7 +84,7 @@ definitions:
         type: "string"
         format: "date-time"
     example:
-      data: 6
+      data: 6.6500000000000003552713678800500929355621337890625
       id: 0
       time: "2000-01-23T04:56:07.000+00:00"
     xml:

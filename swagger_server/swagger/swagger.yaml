@@ -38,4 +38,54 @@ paths:
         400:
           description: "Invalid query"
       x-swagger-router-controller: "swagger_server.controllers.hello_world_controller"
-definitions: {}
+  /data:
+    post:
+      tags:
+      - "data"
+      summary: "Add data sample"
+      description: "Add data sample"
+      operationId: "add_data"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Add data sample"
+        required: false
+        schema:
+          $ref: "#/definitions/Data"
+      responses:
+        200:
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Data"
+        405:
+          description: "Invalid input"
+      x-swagger-router-controller: "swagger_server.controllers.data_controller"
+definitions:
+  Data:
+    type: "object"
+    required:
+    - "data"
+    - "id"
+    - "time"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      data:
+        type: "integer"
+        format: "float"
+      time:
+        type: "string"
+        format: "date-time"
+    example:
+      data: 6
+      id: 0
+      time: "2000-01-23T04:56:07.000+00:00"
+    xml:
+      name: "Data"
